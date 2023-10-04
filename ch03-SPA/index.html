@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lim's store</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <div id="product-intro-container"></div>
+
+    <script>
+        const root = document.getElementById('root')
+
+        async function getProductData() {
+            const response = await fetch('http://test.api.weniv.co.kr/mall')
+            const product = await response.json()
+            return product
+        }
+
+        async function displayProductInfo() {
+            const products = await getProductData()
+            const productIntroContainer = document.getElementById('product-intro-container')
+
+            products.forEach(product => {
+                const element = document.createElement('div')
+                element.className = "product-intro-element"
+
+                const img = document.createElement('img')
+                img.className = "product-thumbnail"
+                img.src = "http://test.api.weniv.co.kr/" + product.thumbnailImg
+                img.alt = product.productName
+                element.appendChild(img)
+
+                const productName = document.createElement('p')
+                productName.className = "product-intro-name"
+                productName.innerText = product.productName
+                element.appendChild(productName)
+
+                const price = document.createElement('p')
+                productName.className = "product-intro-price"
+                price.innerText = product.price
+                element.appendChild(price)
+
+                productIntroContainer.appendChild(element)
+            })
+
+        }
+
+        displayProductInfo();
+    </script>
+</body>
+
+</html>

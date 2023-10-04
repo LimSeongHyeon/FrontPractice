@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import "./reset.css";
+
+
+:root {
+    --main-color: #6327FE;
+    --txt-color: #333333;
+    --border-color: #C4C4C4;
+    --sub-border-color: #E0E0E0;
+    --bg-color: #F2F2F2;
+    --emphasis-txt-color: #EB5757;
+    --sub-txt-color: #828282;
+    --button-border: #BDBDBD;
+}
+
+
+#product-intro-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+div.product-intro-element {
+    margin-top: 30px;
+    text-align: center;
+}
+
+div.product-intro-element>p {
+    width: 100%;
+}
+
+img.product-thumbnail {
+    display: block;
+    width: 30%;
+    height: auto;
+    border-radius: 6%;
+    margin: 0 auto;
+}
