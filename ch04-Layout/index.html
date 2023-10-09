@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <script src="https://kit.fontawesome.com/88d58b766c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var headContentURLs = [
+                "./src/html/favicon.html",
+                "./src/html/font.html"
+            ];
+
+            headContentURLs.forEach(function (url) {
+                $.get(url, function (data) {
+                    $("head").append(data);
+                });
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="header-logo">
+                <i class="fa-brands fa-apple fa-fade"></i>
+                <a href="https://limseonghyeon.com">임성현의 개발노트</a>
+            </div>
+
+            <ul id="header-menu">
+                <li><a href="https://www.limseonghyeon.com">Home</a></li>
+                <li><a href="#">Photo</a></li>
+                <li><a href="#">Introduce</a></li>
+                <li><a href="https://www.limseonghyeon.com/chat">Chat</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <a href="#" id="header-hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </header>
+
+        <main>
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">Database</a></li>
+                    <li><a href="#">Crptography</a></li>
+                    <li><a href="#">AWS</a></li>
+                </ul>
+            </nav>
+
+
+            <section>
+                <article>
+                    <h1>블로그 포스트 제목</h1>
+                    <p>블로그 포스트 내용...</p>
+                </article>
+            </section>
+        </main>
+
+
+        <footer>
+            <ul id="footer-icons">
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+            <p>Copyright © 2023 LimSeongHyeon. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

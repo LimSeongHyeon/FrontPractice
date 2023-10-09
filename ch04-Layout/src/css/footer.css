@@ -1,0 +1,25 @@
+@import url('color.css');
+
+#footer-icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+footer p {
+    padding: 10px 0px;
+    font-family: 'Yellowtail', cursive;
+}
+
+
+#footer-icons li {
+    padding: 8px 12px;
+}
+
+#footer-icons li:hover {
+    background-color: var(--selected-background-color);
+    border-radius: 4px;
+}

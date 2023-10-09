@@ -1,0 +1,22 @@
+@import url('color.css');
+
+
+
+
+.nav-items {
+    padding: 24px 40px;
+    font-family: 'Sora', 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.nav-items li {
+    padding: 12px 40px;
+}
+
+
+.nav-items li:hover {
+    background-color: var(--selected-background-color);
+    border-radius: 4px;
+}

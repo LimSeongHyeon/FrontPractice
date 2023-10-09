@@ -1,0 +1,70 @@
+@import url('color.css');
+
+
+#header-logo {
+    font-size: 20px;
+    width: max-content;
+    white-space: nowrap;
+    color: white;
+}
+
+#header-logo a {
+    width: max-content;
+    font-weight: bold;
+}
+
+#header-menu {
+    font-size: 24px;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+#header-menu li {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+#header-menu li:hover {
+    background-color: var(--selected-background-color);
+    border-radius: 4px;
+}
+
+
+#header-hamburger {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    #header-menu {
+        font-size: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #header-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #header-hamburger {
+        display: block;
+    }
+
+    #header-menu.active {
+        display: flex;
+    }
+}
